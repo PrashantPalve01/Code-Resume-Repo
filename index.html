@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code and Resume</title>
+    <style>
+        .main_box{
+            width:50%;
+        }
+        .code{
+            font-size: 20px;
+        }
+        .form_box{
+            text-align: center;
+        }
+        .form_box input{
+            width: 10%;
+            padding: 7px;
+        }
+        label{
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .resume_section h1{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        embed{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body style="display: flex; justify-content: center;">
+    <div class="main_box">
+        <div class="code">
+            <pre>
+                funcion findSum(a,b){
+                    var c=a+b;
+                    return c
+                }
+            </pre>
+        </div>
+        <div class="form_box">
+            <label for="first">Enter First Number:</label>
+            <input type="number" id="first" name="first">
+
+            <label for="second">Enter Second Number</label>
+            <input type="number" id="second" name="second">
+            
+            <button onclick="findSum()">Find Sum</button>
+            <h2 id="result"></h2>
+        </div>
+        <div class="resume_section">
+            <h1 >My Resume</h1>
+            <embed src="./PRASHANT (2).pdf" type="application/pdf">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function findSum()
+    {
+        var a=Number(document.getElementById("first").value);
+        var b=Number(document.getElementById("second").value);
+        var c=a+b;
+
+        document.getElementById("result").innerHTML=`Addition:${c}`;
+    }
+</script>
